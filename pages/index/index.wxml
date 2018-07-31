@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" display-multiple-items="1">
+  <block wx:for="{{articleList}}" wx:key="*this">
+    <navigator url="/pages/article/article?id={{item.id}}&title={{item.title}}&{{item.cover}}" hover-class="navigator-hover">
+      <swiper-item>
+        <image src="{{item.cover}}" class="slide-image" />
+      </swiper-item>
+    </navigator>
+  </block>
+</swiper>
+
+<!-- 文章列表 -->
+<view class="article">
+
+  <view class="flex-wrp" style="flex-direction:column;" wx:for="{{ articleList }}" wx:key="">
+    <navigator url="/pages/article/article?id={{item.id}}&title={{item.title}}&{{item.cover}}" hover-class="navigator-hover">
+      <view class="article-item">
+        <image src='{{item.cover}}' class='coverImg'></image>
+        <view class='title'>{{ item.title }}</view>
+      </view>
+    </navigator>
+  </view>
+
+</view>

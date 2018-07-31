@@ -1,0 +1,35 @@
+<!--pages/article/article.wxml-->
+<view class='articleTitle'>{{title}}</view>
+<view class='time'>{{time}}</view>
+<view class='cover'>
+  <image src='{{cover}}' class='covreImg'></image>
+</view>
+
+<block class='article' wx:for="{{ contentDetail }}" wx:key="">
+  <view>
+    <image class='contentImg' wx:if="{{item.url}}" src='{{item.url}}'></image>
+    <view class='content'>{{item.text}}</view>
+  </view>
+</block>
+
+<text class='rec_title'> --- 推荐阅读 ---</text>
+
+<view class="recommend">
+  <view class="flex-wrp" style="flex-direction:column;" wx:for="{{ articleList }}" wx:key="">
+    <navigator url="/pages/article/article?id={{item.id}}&title={{item.title}}&{{item.cover}}" hover-class="navigator-hover">
+      <view class="article-item">
+        <image src='{{item.cover}}' class='rcmCoverImg'></image>
+        <view class='title'>{{ item.title }}</view>
+      </view>
+    </navigator>
+  </view>
+</view>
+
+<view class='btn-group'>
+  <navigator url='/pages/index/index'>
+    <button type="primary" class='btn' id='back'>
+      首页
+    </button>
+  </navigator>
+  <button type='disabled' class='btn' id='share'>分享</button>
+</view>

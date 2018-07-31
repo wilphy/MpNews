@@ -1,0 +1,43 @@
+/**index.wxss**/
+.swiper-item{
+  display: block;
+  height: 150px;
+}
+
+.slide-image {
+  width: 100%
+}
+
+.page-section{
+  margin-bottom: 20rpx;
+}
+
+.flex-wrp {
+  display: flex;
+  text-align: center;
+}
+
+.article-item {
+  background: #fefefe;
+  height: 300rpx;
+  border: 1px solid #ccc;
+  margin-top: 1px;
+  border-radius: 15rpx;
+  margin: 20rpx;
+  position: relative;
+}
+
+.coverImg {
+  width: 100%;
+  height: inherit
+}
+
+.title {
+  padding: 5rpx;
+  position: absolute;
+  background: rgba(0, 0, 0, .8);
+  color: #fff;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
