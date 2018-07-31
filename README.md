@@ -1,1 +1,1 @@
-# mpNews
+# A wechat mini program project
